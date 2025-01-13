@@ -1,0 +1,141 @@
+.container {
+  max-width: 100vh;
+}
+
+/* header */
+
+header {
+  grid-template-columns: 1fr;
+  place-items: center center;
+  line-height: 2rem;
+}
+
+header .logo {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+header ul li {
+  padding: 1rem 1rem;
+  font-weight: 800;
+}
+
+header a {
+  display: block;
+  margin: 0;
+}
+
+.btn {
+  font-weight: 800;
+}
+
+.btn-light {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-light:hover {
+  background-color: white;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+}
+
+/* nav */
+
+nav {
+  display: flex;
+  overflow: hidden;
+  margin-top: 0;
+  padding: 2rem;
+}
+nav a {
+  padding: 0 1rem;
+}
+
+/* actu */
+
+.actu {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 30px;
+}
+
+.actu article:first-child {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.actu article:last-child {
+  display: none;
+}
+
+/* ads */
+
+.ads {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "img h1"
+    "img p"
+    "img form";
+  margin: 1rem;
+  padding: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.ads img {
+  grid-area: img;
+  margin-right: 10rem;
+  transition: all 0.5s;
+}
+
+.ads h1 {
+  grid-area: h1;
+  font-size: 2.3rem;
+  line-height: 2.3rem;
+}
+
+.ads img {
+  grid-area: img;
+  width: 100%;
+  padding: 1rem;
+}
+
+.ads p {
+  grid-area: p;
+}
+
+.ads form {
+  grid-area: form;
+  margin-top: 1rem;
+}
+
+.btn-dark {
+  margin-top: 1rem;
+}
+
+/* content */
+
+.popular {
+  display: none;
+}
+
+.content {
+  margin: 2;
+}
+
+article .img-content {
+  max-width: 100%;
+  border-radius: 3px;
+  padding-left: 1rem;
+  padding-top: 2rem;
+}
